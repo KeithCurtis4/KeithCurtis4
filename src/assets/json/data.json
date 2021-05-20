@@ -1,0 +1,82 @@
+{
+    "title" : "BPG Onboarding Logistics Tool Email Editor",
+    "template":
+    [ 
+        { "title": "Re-HireTransfer Training Registration", "id" :"0" },
+        { "title": "Training Readiness", "id":"1" },
+        { "title": "PTAC Meditech 5.6 Core Training PreRegistration", "id":"2" },
+        { "title": "Welcome PRN New Hire Training", "id":"3" },
+        { "title": "RN or Part-Time employee", "id":"4" }
+    ],
+    "dataField":
+    [ 
+        { "title": "First Name", "id":"FName" },
+        { "title": "Last Name", "id":"LName" },
+        { "title": "Date Of Hire", "id":"DOB" },
+        { "title": "mployee Email Addres", "id":"personalEmail" }
+    ],
+    "content":
+    [  
+       {
+            "id" :"0",
+            "width" :"672",
+            "css" : "",
+            "title" : "Re-Hire/Transfer Training Registration",
+            "styles" :
+            [
+               
+              "{margin: auto;  width: 674px; margin-top:20px; margin-bottom:20px; border: 1px solid grey; background-color: #e2ebf5; min-height: 80%; font-family: Calibri,sans-serif; color: black; font-size: 11pt; font-weight: 500;}",
+              "h1 {color: #1e345d; font-weight: 600; font-size: 18pt;}",
+              "h2 {color: #1e345d; font-weight: 600; font-size: 16pt;}",
+              "h3 {color: #ed7d31; font-weight: 600; font-size: 14pt;}",
+              "h4 {color: #1e345d; font-style: italic; font-weight: 600; font-size: 12pt;}",
+              "li {color: #1e345d; padding-bottom: 10px; list-style-type: square; }",
+              "hr {background-color: #1e345d; height: 2px;}"
+              ],
+            "area":
+             [
+                {
+                    "id" : "header",    
+                    "beginTag":"<div>",
+                    "designStyle":"",
+                    "html": "&lt;table width=&quot;672&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt; &lt;tr&gt; &lt;td width=&quot;672&quot; style=&quot;background-color: white&quot;&gt;&lt;img src=&quot;http://parallon.com/sites/default/files/parallon-email-header.png&quot;&gt;&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;",
+                    "editable":"false",
+                    "endTag":"<div>"                    
+                },
+                {
+                    "id" : "title",   
+                    "beginTag":"<div>",
+                    "designStyle":"",
+                    "html": "<h1>Re-Hire/Transfer Training Registration<h1>",
+                    "editable":"true",
+                    "end":"<div>",
+                    "styles" :
+                    [
+                     "{padding: 20px;}"
+                    ]
+                },
+                {
+                    "id" : "content",    
+                    "beginTag":"<div>",
+                    "designStyle":"",
+                    "html": "&lt;h2&gt;Congratulations on your Re-Hire/Transfer Employee&lt;/h2&gt;&lt;p&gt;&lt;h3&gt;[Student Name]&lt;/h3&gt;&lt;/p&gt;&lt;p&gt;Because your new employee is a re-hire/transfer, please read this &lt;a href=&quot;https://connect.medcity.net/documents/59906972/78016821/PARA.PP.EDU.001_Training_Requirements_2020.pdf/681f4fbf-f52d-a3aa-c71b-2442d7ecfa4a?t=1585667330322&quot; target=&quot;_blank&quot;&gt;policy&lt;/a&gt; and respond within 24 hours of receipt:  &lt;/p&gt;&lt;p&gt;&lt;h1&gt;&lt;span style=&quot;color: #ed7d31;&quot;&gt;&lt;strong&gt;Select Training:&lt;/strong&gt;&lt;/span&gt;&lt;/h1&gt;&lt;/p&gt;&lt;p&gt;&lt;h2&gt;&lt;span style=&quot;display: inline-block; border-bottom: 2px solid #000;&quot;&gt;Independent Training Classroom*&lt;/span&gt;&lt;/h2&gt;&lt;/p&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;General Orientation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;General Basics&lt;/b&gt;&lt;/p&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;Back Office Basics&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;* Independent Training Classroom must be completed before instructor-led training.&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;h2&gt;&lt;span style=&quot;display: inline-block; border-bottom: 2px solid #000;&quot;&gt;Instructor-Led Training&lt;/span&gt;&lt;/h2&gt;&lt;/p&gt;&lt;i&gt;Click &lt;a href=&quot;https://parashare.app.parallon.com/sites/Education/BPGNewHireLearningAndDevelopment/_layouts/15/start.aspx#/Lists/Training%20Classes/ALL%20Events.aspx&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to view the Training Calendar.&lt;/i&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;PTAC Meditech 5.6 Core Training&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;padding-left:50px;&quot;&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;Day&lt;/b&gt; Class (Tuesday &amp;ndash; Friday)&lt;/p&gt;&lt;p style=&quot;padding-left:50px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Type class date here:&lt;u&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/p&gt;&lt;p style=&quot;padding-left:80px;&quot;&gt; OR&lt;/p&gt;&lt;p style=&quot;padding-left:50px;&quot;&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;Night&lt;/b&gt; Class (Monday &amp;ndash; Friday)&lt;/p&gt;&lt;p style=&quot;padding-left:50px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Type class date here:&lt;u&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/p&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;Virtual Registration Training&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;padding:20px;&quot;&gt;Type class date here:&lt;/span&gt;&lt;u&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/p&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;Payment Compliance Foundations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;padding:20px;&quot;&gt;Type class date here:&lt;/span&gt;&lt;u&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/p&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;Collection Core&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;padding:20px;&quot;&gt;Type class date here:&lt;/span&gt;&lt;u&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/p&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;Assurance Reimbursement Management Training (ARM) &lt;/b&gt;&lt;/p&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] Other: &lt;u&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/p&gt;&lt;h3&gt;If training is not needed, provide reason:&lt;/h3&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;Training Not Required;&lt;/b&gt; meets policy requirements &lt;/p&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] &lt;b&gt;Request Test Out;&lt;/b&gt; meets policy requirements &lt;/p&gt;&lt;p&gt;[&amp;nbsp;&amp;nbsp;] Other: &lt;u&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/u&gt;&lt;/p&gt;&lt;h2&gt;Questions?&lt;/h2&gt;&lt;p&gt;Please contact &lt;a href=&quot;mailto:PARA.NewHireTraining@parallon.com&quot;&gt;Parallon New Hire Training&lt;/a&gt; if you have questions.&lt;/p&gt;",
+                    "end":"<div>",
+                    "styles" :
+                    [
+                     "{padding-left: 20px; padding-right: 20px;}"
+                    ]
+                },
+                {
+                    "id" : "footer",    
+                    "beginTag":"<div>",
+                    "designStyle":"",
+                    "html": "&lt;table width=&quot;672&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt; &lt;tr&gt; &lt;td width=&quot;672&quot; style=&quot;background-color: white&quot;&gt;&lt;img src=&quot;http://parallon.com/sites/default/files/parallon-email-footer.png&quot;&gt;&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;",
+                    "editable":"false",
+                    "endTag":"<div>"
+                }
+               
+             ]
+
+        }
+    ] 
+}

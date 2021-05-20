@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+
+html, body {
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.MainContainer{
+  padding-left: 12px;
+  padding-right: 1px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.SideBar{
+  background-color: #4D72DE;
+  color: White;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.MainContent{
+  background-color: #E6E9EA;
+  color: black;
+  font-weight: bold;
+  min-height: 100vh;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+.NavigationContainer{
+  background-color: #1E345D;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.NavigationContent{
+  background-color: #1E345D;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.MenuItemIcon{
+  padding-right: 10px;
+  color: #A4B7EE;
 }
+
+.MenuItem{
+  cursor: "pointer";
+  color: #A4B7EE;
+  
+}
+.MenuItemActive{
+  padding-right: 10px;
+  color: #A4B7EE;
+}
+
+.MenuContent{
+  color: black;
+  font-weight: normal;
+}
+
+.list-group-item:hover {
+  background-color: red;
+  cursor: "pointer";
+
+}
+
+.Toolbar
+ {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  border: 1px solid transparent;
+  background-color: #E6E9EA;
+}
+
+.btn-padded-left{
+  padding-left: 10px;
+}
+
+
+
+
+.CodeEditor{
+  position: fixed;
+  top: 100;
+  left: 100;
+  width: 60%;
+  height: 500px;
+  background-color: white;
+  color: black;
+  text-align: left;
+  padding: 10px;
+  border: 1px dotted grey;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.CodeEditorBody{
+  height: 75%;
+}
+.CodeEditorText{
+  width: 100%;
+  height: 90%;
+  border: 1px dotted grey;
+}
+
+.ModalIcon{
+  font-size:28px;
+}
+
