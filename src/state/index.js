@@ -9,7 +9,8 @@ let initialState = {
     serviceError : '',
     emailContent :[],
     busy: false,
-    notification : ''
+    notification : '',
+    activeTemplate: -1
 };
 
 const Store = ({children}) => {

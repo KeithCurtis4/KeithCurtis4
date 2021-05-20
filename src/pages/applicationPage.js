@@ -12,6 +12,7 @@ const ApplicationPage = (props) => {
     const { appCode} = props
     const [state, dispatch] = useContext(Context);
     
+    
     useEffect(() => {
     
     }
@@ -24,7 +25,7 @@ const ApplicationPage = (props) => {
             <SideBar emailContent appCode={appCode} />
           </Col>
           <Col lg={10} className="col-10 MainContent border-light" style={{ paddingLeft: "0px" }}>
-            <TopNavBar title='Select Email Content' />
+            <TopNavBar title='Select Email Content'/>
             <Editor></Editor>
           </Col>
           <Notificaiton></Notificaiton>

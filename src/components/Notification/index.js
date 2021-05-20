@@ -27,8 +27,7 @@ const Notification = () => {
       color: 'white',
       backgroundColor: '#a1080b',
       fontSize: '16px',
-      textAlign: 'center',
-      width: '100px'
+      textAlign: 'left'
       },
     closeStyle: {
       color: 'white',
@@ -42,8 +41,7 @@ const Notification = () => {
       color: 'white',
       backgroundColor: 'green',
       fontSize: '16px',
-      textAlign: 'center',
-      width: '100px'
+      textAlign: 'center'
       },
     closeStyle: {
       color: 'white',
@@ -66,7 +64,7 @@ const Notification = () => {
   }, [state.notificationError]);
 
   useEffect(() => {
-    if (state.notification)
+    if (state.notificationOK)
     openSnackbarOK(state.notificationOK)
   }, [state.notificationOK]);
 

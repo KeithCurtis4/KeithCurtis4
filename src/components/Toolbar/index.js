@@ -5,7 +5,8 @@ import LinkEditor from './linkEditor';
 import CodeEditor from '../CodeEditor'
 import SaveEmail from './saveEmail'
 
-const Toolbar = () => {
+const Toolbar = (props) => {
+    const { visible } = props
     const [showLinkEditor, setShowLinkEditor] = useState(false);
     const [showCodeEditor, setShowCodeEditor] = useState(false);
     const [showSaveEmail,  setShowSaveEmail] = useState(false);
@@ -58,7 +59,8 @@ const Toolbar = () => {
 
     return (
         <React.Fragment>
-
+            
+            {visible && (
             <div className="btn-toolbar Toolbar">
                 <div className="btn-group">
                     <button type="button" className="btn btn-outline-dark" title="Bold" onClick={(event) => OnClick(event, 'bold')}><FontAwesomeIcon icon={faBold} /> </button>
@@ -100,10 +102,11 @@ const Toolbar = () => {
                 <div className="btn-group  btn-padded-left">
                     <button type="button" className="btn btn-outline-dark" title="Save Document"  onClick={(event) => displaySaveEmail(event)}><FontAwesomeIcon icon={faSave} /></button>
                 </div>
-            </div>
+            </div>)}
             <LinkEditor display={showLinkEditor} onClose={closeLinkEditor}/>
             <SaveEmail display={showSaveEmail} onClose={closeSaveEmail}/>
             {showCodeEditor  && (<CodeEditor/>)}
+            
         </React.Fragment>
     );
 };

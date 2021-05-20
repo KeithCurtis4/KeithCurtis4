@@ -12,11 +12,7 @@ const Reducer = (state, action) => {
                 activeMenu: action.payload
             };
 
-        case 'SET_ERROR':
-            return {
-                ...state,
-                error: action.payload
-            };
+      
         case 'SET_EMAILS':
             return {
                 ...state,
@@ -32,11 +28,7 @@ const Reducer = (state, action) => {
                 ...state,
                 codeEditor: action.payload
             };
-        case 'SET_SERVICE_ERROR':
-            return {
-                ...state,
-                serviceError: action.payload
-            };
+        
 
         case 'SET_ACTIVE_CONTENT':
             return {

@@ -9,7 +9,7 @@ const Editor = () => {
      const [state, dispatch] = useContext(Context);
      const [editTemplateID, setEditTemplateID] = useState(-1);
      const [editingContent, setEditingContent] = useState(undefined);
-     //const [StyleAdded, setEditingContent] = useState(true);
+     const [showToolbar, setShowToolbar] = useState(false);
 
      const findTemplateFromID = (id) => {
          let content = _.find(state.emailContent, function (o) { return o.WorkflowEmailContentID === id; });
@@ -60,9 +60,12 @@ const Editor = () => {
      useEffect(() => {
           if (state.activeTemplate !== editTemplateID) {
               setEditingContent(findTemplateFromID(state.activeTemplate));
-               setEditTemplateID(state.activeTemplate);
+              setEditTemplateID(state.activeTemplate);
+              setShowToolbar(true);
           }
      }, [state.activeTemplate]);
+
+
 
      const renderEditableAreas = () => {
           let contentAreas = null;
@@ -76,7 +79,7 @@ const Editor = () => {
           // console.log('contentAreas', editingContent)
           return (
                <React.Fragment>
-                    <Toolbar></Toolbar>
+                    <Toolbar visible={showToolbar}></Toolbar>
                     <div>
                          <div id="contentEditor">
                               {contentAreas}

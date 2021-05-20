@@ -4,7 +4,7 @@ import { faCog, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { ListGroup } from 'react-bootstrap';
 import { Context } from '../../state';
 import Service from '../../services/';
-import fetchJsonp from 'fetch-jsonp';
+import {GetURLData} from '../../services/getURLData'
 import _ from 'lodash'
 
 const SideBarEmailContent = (props) => {
@@ -34,10 +34,7 @@ const SideBarEmailContent = (props) => {
   }
 
 
-  const ConvertContent = (json) => {
-    console.log(json.data);
-    var data =  JSON.parse(json.data);
-    
+  const ProcessContent = (data) => {
     _.forEach(data, function(value) {
       if(value.EmailContent){
       var convertedValue =atob(value.EmailContent); 
@@ -47,18 +44,18 @@ const SideBarEmailContent = (props) => {
     dispatch({ type: 'SET_ACTIVE_CONTENT', payload: data });
   }
 
+  const OnDataReceived = (data) => {
+    ProcessContent(data)
+
+    if(data.length===0)
+      dispatch({ type: 'SET_NOTIFICATION_ERROR', payload: 'No email content found!'});
+  }
+
   useEffect(() => {
   if (state.email) {
       const url = Service.GetApplicationEmailContent(state.email);
 
-      fetchJsonp(url)
-        .then(function (response) {
-          return response.json();
-        }).then(function (json) {
-          ConvertContent(json);
-         }).catch(function (ex) {
-          dispatch({ type: 'SET_SERVICE_ERROR', payload: ex });
-        })
+      GetURLData(url, dispatch, OnDataReceived);
     }
   }, [state.email]);
 

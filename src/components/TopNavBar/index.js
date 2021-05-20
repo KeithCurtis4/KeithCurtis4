@@ -9,7 +9,7 @@ import { Context } from '../../state';
 
 
 const TopNavBar = (props) => {
-  const { title} = props
+  const {title} = props
   const [state] = useContext(Context);
   
   const navBarTitle = title||state.title;
