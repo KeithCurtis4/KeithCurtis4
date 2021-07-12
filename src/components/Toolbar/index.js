@@ -49,6 +49,10 @@ const Toolbar = (props) => {
         setShowCodeEditor(!showCodeEditor);
     }
 
+    const closeCodeEditor = () => {
+        setShowCodeEditor(false);
+    }
+
     const displaySaveEmail = () => {
         setShowSaveEmail(!showSaveEmail);
     }
@@ -105,7 +109,7 @@ const Toolbar = (props) => {
             </div>)}
             <LinkEditor display={showLinkEditor} onClose={closeLinkEditor}/>
             <SaveEmail display={showSaveEmail} onClose={closeSaveEmail}/>
-            {showCodeEditor  && (<CodeEditor/>)}
+            {showCodeEditor  && (<CodeEditor onClose={closeCodeEditor}/>)}
             
         </React.Fragment>
     );

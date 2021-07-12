@@ -4,10 +4,10 @@ import { faAngleRight, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { ListGroup } from 'react-bootstrap';
 import { Context } from '../../state';
 import { GetURLData }  from '../../services/getURLData'
-import Service from '../../services/';
+import Service from '../../services';
 import SystemNotification from '../../common/systemNotification'
 
-const SideBarEmail = (props) => {
+const SideBarEmailTypes = (props) => {
   const { name } = props;
   const [state, dispatch] = useContext(Context);
   const [toggle, setToggle] = useState(true);
@@ -15,17 +15,17 @@ const SideBarEmail = (props) => {
 
   const OnClick = (e) => {
     e.preventDefault();
-    SystemNotification.ActiveMenu(dispatch, !toggle ? name : '');
+     SystemNotification.ActiveMenu(dispatch, !toggle ? name : '');
     setToggle(!toggle);
   }
 
   const OnClickEmail = (e, id) => {
     e.preventDefault();
-    SystemNotification.ActiveEmail(dispatch, id);
+    SystemNotification.SetEmailTypeID(dispatch, id);
   }
   
   const RenderFields = () => {
-    var templates = state.emails.map(function (t) {
+    var templates = state.emailTypeList.map(function (t) {
       var url = '#' + row;
       var key = "email" + row;
 
@@ -42,24 +42,24 @@ const SideBarEmail = (props) => {
   };
 
   const OnDataReceived = (data) => {
-    SystemNotification.SetEmails(dispatch, data);
-   
-    if(data.length===0)
+    SystemNotification.SetEmailTypeList(dispatch, data);
+
+  if(data.length===0)
       SystemNotification.DisplayNotificationError(dispatch, 'Application email not found!');
   }
 
   useEffect(() => {
-  if(state.application)
-      GetURLData(Service.GetEmailsByApplicationCode(state.application), dispatch, OnDataReceived);
-  }, [state.application]);
+  if(state.applicationCode)
+    GetURLData(Service.GetEmailsByApplicationCode(state.applicationCode), dispatch, OnDataReceived);
+  }, [state.applicationCode]);
 
   return (
     <React.Fragment>
-    <div style={{ cursor: "pointer", paddingBottom: "10px" }} onClick={(event) => OnClick(event)}>
+    <div style={{ cursor: "pointer", paddingBottom: "10px", paddingTop: "10px" }} onClick={(event) => OnClick(event)}>
         <div className="MenuItemIcon MenuItem" style={{ float: "left", color: state.activeMenu === name ? 'white' : '' }}>
           <span> <FontAwesomeIcon icon={faEnvelope} /></span>
         </div>
-        <span className="MenuItem" style={{ cursor: "pointer", color: state.activeMenu === name ? 'white' : '' }}>Email</span>
+        <span className="MenuItem" style={{ cursor: "pointer", color: state.activeMenu === name ? 'white' : '' }}>Email Types</span>
 
         <div className="MenuItem" style={{ float: "right", color: state.activeMenu === name ? 'white' : '' }} >
           <span> <FontAwesomeIcon icon={faAngleRight} /></span>
@@ -71,4 +71,4 @@ const SideBarEmail = (props) => {
   );
 };
 
-export default React.memo(SideBarEmail);
+export default React.memo(SideBarEmailTypes);

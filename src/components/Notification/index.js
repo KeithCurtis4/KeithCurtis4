@@ -6,7 +6,6 @@ import { Context } from '../../state';
 const Notification = () => {
   const [state, dispatch] = useContext(Context);
 
-
   const optionsNotificaiton = {
     position: 'bottom-right',
     style: {

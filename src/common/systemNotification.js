@@ -1,24 +1,36 @@
 const SystemNotification = {
-    ActiveTemplate: function (dispatch, data) {
-        dispatch({ type: 'SET_ACTIVE_CONTENT', payload: data });
+    //Application Code 
+    SetApplication: function (dispatch, applicationCode) {
+        dispatch({ type: 'SET_APPLICATION_CODE', payload: applicationCode });
     },
+    // Array of Email Types
+    SetEmailTypeList: function (dispatch, data) {
+        dispatch({ type: 'SET_EMAIL_TYPE_LIST', payload: data });
+    }, 
+     // ID of Active Email Type ,-1 when not selected
+     SetEmailTypeID: function (dispatch, data) {
+        dispatch({ type: 'SET_EMAIL_TYPE_ID', payload: data });
+    }, 
+    // Array of Emails 
+    SetEmailList: function (dispatch, data) {
+        dispatch({ type: 'SET_EMAIL_LIST', payload: data });
+    }, 
+
+     // ID of Active Email ,-1 when not selected
+    SetEmailID: function (dispatch, data) {
+        dispatch({ type: 'SET_EMAIL_ID', payload: data });
+    }, 
+    
+    // Id of Email object
     ActiveMenu: function (dispatch, data) {
         dispatch({ type: 'SET_ACTIVE_MENU', payload: data });
-    },
-    SetEmails: function (dispatch, data) {
-        dispatch({ type: 'SET_EMAILS', payload: data });
-    },
-    ActiveEmail: function (dispatch, id) {
-        dispatch({ type: 'SET_ACTIVE_EMAIL', payload: id });
-    },
+    }, // Array of Email objects
+     
     SetCodeEditor: function (dispatch, data) {
         dispatch({ type: 'SET_CODE_EDITOR', payload: data });
     },
     SetActiveContent: function (dispatch, data) {
         dispatch({ type: 'SET_ACTIVE_CONTENT', payload: data });
-    },
-    SetApplication: function (dispatch, appCode) {
-        dispatch({ type: 'SET_APPLICATION', payload: appCode });
     },
     SetChangedContent: function (dispatch, data) {
         dispatch({ type: 'SET_CHANGED_CONTENT', payload: data });
@@ -34,6 +46,17 @@ const SystemNotification = {
     },
     DisplayNotificationOk: function (dispatch, msg) {
         dispatch({ type: 'SET_NOTIFICATION_OK', payload: msg });
+    },
+    SetSecureUser:  function (dispatch, userName) {
+        dispatch({ type: 'SET_SECURE_USER', payload: userName });
+    },
+    SetSecureApplication:  function (dispatch, applicationCode) {
+        dispatch({ type: 'SET_SECURE_APPLICATION', payload: applicationCode });
+    },
+    ClearData: function (dispatch) {
+        console.log('ClearData');
+        SystemNotification.SetEmailID(dispatch,-1);
+        SystemNotification.SetActiveContent(dispatch, []);
     }
 }
 

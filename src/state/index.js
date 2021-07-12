@@ -1,16 +1,23 @@
 import React, {createContext, useReducer} from "react";
 import Reducer from './reducer'
-import data from '../assets/json/data.json'
 
 let initialState = {
-    application : '',
-    emails: [],
-    error: null,
-    serviceError : '',
-    emailContent :[],
+    activeTemplate: -1,
+    applicationCode : '',
     busy: false,
+    code: '',
+    codeTitle: '',
+    emailTypeID: -1,
+    emailTypeList: [],
+    emailList :[],
+    emailId: -1,
+    editArea: '',
     notification : '',
-    activeTemplate: -1
+    secureApplication:'',
+    secureUser:''
+
+
+
 };
 
 const Store = ({children}) => {

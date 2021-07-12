@@ -16,6 +16,8 @@ html, body {
   min-height: 100vh;
   padding-left: 0px;
   padding-right: 0px;
+  overflow-y: auto;
+
 }
 
 .MainContent{

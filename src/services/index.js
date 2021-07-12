@@ -60,9 +60,6 @@ const Service = {
       query = query.concat('&max','=', Service.encodeData(maxBlock));
       query = query.concat('&count','=', Service.encodeData(block));
       query = query.concat('&content','=', Service.encodeData(content));
-
-      //console.log('UpdateWorkflowEmailContent content :'+block, content);
-      //console.log('UpdateWorkflowEmailContent coded:'+block, Service.encodeData(content));
       
       const k2IntegrationURL = Service.buildK2IntegrationURL('api/K2Common/SaveEmailContent', query);
                
@@ -76,8 +73,15 @@ const Service = {
       const param = 'url='.concat(Service.encodeURL(smartObjectURL));
       const k2IntegrationURL = Service.buildK2IntegrationURL('api/K2Common/JsonpCall', param);
       return k2IntegrationURL;
-   }
+   },
 
+   GetWorkflowApplications: function (workflowEmailContentID, uploadID, maxBlock, block, content) {
+      const smartObjectURL = Service.buildSmartObjectURL('SmartObjectServices/rest/Common/SmartObjects/Common%20WorkflowApplication/List', '', 'json');
+      const param = 'url='.concat(Service.encodeURL(smartObjectURL));
+      const k2IntegrationURL = Service.buildK2IntegrationURL('api/K2Common/JsonpCall', param);
+      
+      return k2IntegrationURL;
+   }
 }
 
 export default Service;

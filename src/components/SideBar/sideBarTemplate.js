@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCog, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { ListGroup } from 'react-bootstrap';
 import { Context } from '../../state';
+import SystemNotification from '../../common/systemNotification'
 
 const SideBarTemplate = (props) => {
   const { name } = props
@@ -32,7 +33,7 @@ const SideBarTemplate = (props) => {
 
   const OnClick = (e) => {
     e.preventDefault();
-    dispatch({ type: 'SET_ACTIVE_MENU', payload: !toggle ? name : '' });
+    SystemNotification.ActiveMenu(dispatch, !toggle ? name : '');
     setToggle(!toggle);
 
   }

@@ -11,18 +11,37 @@ export const GetURLData = (url, dispatch, onCompleted, returnObj,parse=true) => 
         dispatch({ type: 'SET_NOTIFICATION_ERROR', payload: msg.toString() });
     };
 
+    const parseJSON = (json) => {
+       
+        var result = [];
+        var data =  json.data.replaceAll('\\', '');
+        try{
+           result = JSON.parse(data);
+         }
+        catch(e)
+        {
+            setErrorNotificationError(e);
+        }
+
+        return result;
+    }
+
     setBusy(true);
 
     try {
         fetchJsonp(url)
             .then(function (response) {
+                setBusy(false);
                 return response.json();
             }).then(function (json) {
-                if(parse)
-                    data = JSON.parse(json.data);
-                else
-                    data = json;
-                onCompleted(data, returnObj);
+               
+                if(parse){
+                    data = parseJSON(json);}
+                else{
+                    data = json;}
+
+                onCompleted(data, returnObj);  
+
             }).catch(function (ex) {
                 setErrorNotificationError(ex);
             });
@@ -31,7 +50,7 @@ export const GetURLData = (url, dispatch, onCompleted, returnObj,parse=true) => 
         setErrorNotificationError('Error loading application')
     }
 
-    setBusy(false);
+   
 
     //do not need this
     return[data];

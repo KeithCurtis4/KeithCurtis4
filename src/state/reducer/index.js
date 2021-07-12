@@ -1,5 +1,35 @@
 const Reducer = (state, action) => {
     switch (action.type) {
+        case 'SET_APPLICATION_CODE':
+            return {
+                ...state,
+                applicationCode: action.payload
+            };
+
+        case 'SET_EMAIL_TYPE_LIST':
+            return {
+                ...state,
+                emailTypeList: action.payload
+            };
+
+        case 'SET_EMAIL_TYPE_ID':
+        return {
+            ...state,
+            emailTypeID: action.payload
+        };
+
+        case 'SET_EMAIL_LIST':
+        return {
+            ...state,
+            emailList: action.payload
+        };
+
+        case 'SET_EMAIL_ID':
+            return {
+                ...state,
+                emailId: action.payload
+            };
+            
         case 'SET_ACTIVE_TEMPLATE':
             return {
                 ...state,
@@ -12,17 +42,6 @@ const Reducer = (state, action) => {
                 activeMenu: action.payload
             };
 
-      
-        case 'SET_EMAILS':
-            return {
-                ...state,
-                emails: action.payload
-            };
-        case 'SET_ACTIVE_EMAIL':
-            return {
-                ...state,
-                email: action.payload
-            };
         case 'SET_CODE_EDITOR':
             return {
                 ...state,
@@ -34,18 +53,6 @@ const Reducer = (state, action) => {
             return {
                 ...state,
                 emailContent: action.payload
-            };
-
-        case 'SET_APPLICATION':
-            return {
-                ...state,
-                application: action.payload
-            };
-
-        case 'SET_CHANGED_CONTENT':
-            return {
-                ...state,
-                emailChanged: action.payload
             };
 
         case 'SET_BUSY':
@@ -71,6 +78,18 @@ const Reducer = (state, action) => {
                 ...state,
                 notificationOK: action.payload
             };
+        case 'SET_SECURE_USER':
+            return {
+                ...state,
+                secureUser: action.payload
+            };
+        
+            case 'SET_SECURE_APPLICATION':
+        return {
+            ...state,
+            secureApplication: action.payload
+        };
+            
         default:
             return state;
     }

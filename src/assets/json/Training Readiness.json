@@ -1,0 +1,52 @@
+{
+ "content":
+    [  
+       {
+            "id" :"0",
+            "width" :"672",
+            "css" : "",
+            "title" : "Congratulations on hiring your new team member!",
+            "subject" :"Congratulations on hiring  [Student Name] (3-4ID) your new team member.",
+            "bodyStyle" : "body {font-family: Calibri,sans-serif; color: black;font-size: 11pt; font-weight: 500; margin: 0px; padding: 0px; background-color: #e2ebf5;}",
+            "styles" :
+            [
+              "{margin: auto;  width: 674px; margin-top:20px; margin-bottom:20px; border: 1px solid grey; background-color: #e2ebf5; min-height: 80%; font-family: Calibri,sans-serif; color: black; font-size: 11pt; font-weight: 500;}",
+              "h1 {color: #1e345d; font-weight: 600; font-size: 18pt;}",
+              "h2 {color: #1e345d; font-weight: 600; font-size: 16pt;}",
+              "h3 {color: #1e345d; font-weight: 600; font-size: 14pt;}",
+              "h4 {color: #1e345d; font-style: italic; font-weight: 600; font-size: 12pt;}",
+              "li {color: #1e345d; padding-bottom: 10px; list-style-type: round;}",
+              "hr {background-color: #1e345d; height: 2px;}",
+              "#footer {color: #828f9b; font-size: 8pt; background-color: #e2ebf5;}"
+            ],
+            "area":
+             [
+                {
+                    "id" : "header",    
+                    "beginTag":"<div>",
+                    "designStyle":"",
+                    "html": "&lt;table width=&quot;672&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt; &lt;tr&gt; &lt;td width=&quot;672&quot; style=&quot;background-color: white&quot;&gt;&lt;img src=&quot;http://parallon.com/sites/default/files/parallon-email-header.png&quot;&gt;&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;",
+                    "editable":"false",
+                    "endTag":"<div>"                    
+                },
+               {
+                    "id" : "content",    
+                    "beginTag":"<div>",
+                    "designStyle":"",
+                    "html": "&lt;table width=&quot;672&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt; &lt;tr&gt; &lt;td width=&quot;672&quot; style=&quot;background-color: white; padding-left: 30px; padding-right: 30px;&quot; align=&quot;left&quot;&gt; &lt;h1&gt;Congratulations on hiring your new team member&lt;/h1&gt;  &lt;p&gt;To ensure your team member is set up for a successful learning experience please complete the onboarding tasks below:&lt;/p&gt; &lt;table width=&quot;610&quot; border=&quot;0&quot; &gt; &lt;tr style=&quot;background-color:#323e4f; height: 75px&quot;&gt; &lt;td width=&quot;50%&quot; style=&quot;background-color:#323e4f; color: white&quot; align=&quot;Center&quot;&gt;&lt;b&gt;Task&lt;/b&gt;&lt;/td&gt; &lt;td width=&quot;10%&quot; style=&quot;background-color:#323e4f; color: white&quot; align=&quot;Center&quot;&gt;&lt;b&gt;IT&lt;/b&gt;&lt;/td&gt; &lt;td width=&quot;20%&quot; style=&quot;background-color:#323e4f; color: white&quot; align=&quot;Center&quot;&gt;&lt;b&gt;HIRING&lt;br/&gt;MANAGER&lt;/b&gt;&lt;/td&gt; &lt;td width=&quot;20%&quot; style=&quot;background-color:#323e4f; color: white&quot; align=&quot;Center&quot;&gt;&lt;b&gt;LOCAL SSC&lt;br/&gt;EDUCATION&lt;/b&gt;&lt;/td&gt;  &lt;/tr&gt; &lt;tr&gt; &lt;td width=&quot;40%&quot; style=&quot;background-color:#ebf4fb&quot;&gt;  &lt;span style=&quot;color: black&quot;&gt; Communicate training expectations to your team member; if they are unable to attend the entire session; They will be rescheduled &lt;/span&gt;&lt;br/&gt;&lt;br/&gt; &lt;span style=&quot;color: #ed7d31&quot;&gt; Share attendance &lt;a href=&quot;http://connect.medcity.net/documents/59906972/78016821/PARA.PP.EDU.022_Student+Training+Attendance+Policy.pdf?download=trues&quot;&gt;policy&lt;/a&gt; with employee &lt;/span&gt;  &lt;/td&gt; &lt;td style=&quot;background-color:#ebf4fb&quot;&gt;&amp;nbsp;&lt;/td&gt; &lt;td style=&quot;background-color:#ebf4fb&quot; align=&quot;Center&quot;&gt;&lt;b&gt;X&lt;/b&gt;&lt;/td&gt; &lt;td style=&quot;background-color:#ebf4fb&quot; align=&quot;Center&quot;&gt;&lt;b&gt;X&lt;/b&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td width=&quot;50%&quot; style=&quot;background-color:#dadee2&quot;&gt; Ensure employee has the following working equipment: &lt;ul&gt; &lt;li&gt;&lt;span style=&quot;color: black&quot;&gt;Work Computer (no sharing)&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;span style=&quot;color: black&quot;&gt;Webcam&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;span style=&quot;color: black&quot;&gt;USB headset with a microphone&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;span style=&quot;color: black&quot;&gt;Dual Monitors &lt;/span&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/td&gt; &lt;td style=&quot;background-color:#dadee2&quot; align=&quot;Center&quot;&gt;&lt;b&gt;X&lt;/b&gt;&lt;/td&gt; &lt;td style=&quot;background-color:#dadee2&quot; align=&quot;Center&quot;&gt;&lt;b&gt;X&lt;/b&gt;&lt;/td&gt; &lt;td style=&quot;background-color:#dadee2&quot; align=&quot;Center&quot;&gt;&lt;b&gt;X&lt;/b&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td width=&quot;50%&quot; style=&quot;background-color:#ebf4fb&quot;&gt; Ensure employees have the following: &lt;ul&gt; &lt;li&gt;&lt;span style=&quot;color: black&quot;&gt;Network Access&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;span style=&quot;color: black&quot;&gt;Outlook&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;span style=&quot;color: black&quot;&gt;WebEx Teams&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;span style=&quot;color: black&quot;&gt;Adobe&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;span style=&quot;color: black&quot;&gt;Citrix is loaded for employees attending Patient Access and/or Back Office Training (4.6 or 4.9 required)&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;span style=&quot;color: black&quot;&gt;Avaya (Collections)&lt;/span&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/td&gt; &lt;td style=&quot;background-color:#ebf4fb&quot; align=&quot;Center&quot;&gt;&lt;b&gt;X&lt;/b&gt;&lt;/td&gt; &lt;td style=&quot;background-color:#ebf4fb&quot; align=&quot;Center&quot;&gt;&lt;b&gt;X&lt;/b&gt;&lt;/td&gt; &lt;td style=&quot;background-color:#ebf4fb&quot; align=&quot;Center&quot;&gt;&lt;b&gt;X&lt;/b&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td width=&quot;50%&quot; style=&quot;background-color:#dadee2&quot;&gt; Ensure IT or local team resources are available to assist students in resolving technical issues  &lt;/td&gt; &lt;td style=&quot;background-color:#dadee2&quot; align=&quot;Center&quot;&gt;&lt;b&gt;X&lt;/b&gt;&lt;/td&gt; &lt;td style=&quot;background-color:#dadee2&quot; align=&quot;Center&quot;&gt;&lt;b&gt;X&lt;/b&gt;&lt;/td&gt; &lt;td style=&quot;background-color:#dadee2&quot; align=&quot;Center&quot;&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; &lt;p&gt; &lt;b&gt;Reminder:&lt;/b&gt;&amp;nbsp;  &lt;span style=&quot;color: black&quot;&gt;  Team member must complete all training on a work computer, the use of a personal device is not allowed due to access issues. &lt;/span&gt;  &lt;/p&gt; &lt;hr style =&quot;background-color: gray; height: 1px;&quot;/&gt; &lt;h3 style=&quot;Color: #1e345d&quot;&gt;Questions?&lt;/h3&gt; &lt;p&gt;Please contact the &lt;a href=&quot;mailto:PARA.NewHireTraining@parallon.com&quot;&gt;Parallon New Hire Training&lt;/a&gt; if you have questions&lt;/p&gt; &lt;/td&gt; &lt;/tr&gt; &lt;/table&gt;",
+                    "end":"<div>"
+                },
+                {
+                    "id" : "footer",    
+                    "beginTag":"<div>",
+                    "designStyle":"",
+                    "html": "&lt;table width=&quot;672&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td width=&quot;672&quot;&gt;&lt;img src=&quot;http://parallon.com/sites/default/files/parallon-email-footer.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;672&quot; align=&quot;Left&quot;&gt;&lt;div id=&quot;footer&quot;&gt;This email and any files transmitted with it may contain PRIVILEGED or CONFIDENTIAL information and may be read or used only by the intended recipient.&lt;br/&gt;If you are not the intended recipient of the email or any of its attachments, please be advised that you have received this email in error and that any use, dissemination, distribution, forwarding, printing, or copying of this email or any attached files is strictly prohibited. If you have received this email in error, please immediately purge it and all attachments and notify the sender by reply email or contact the sender at the number listed.&lt;br/&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt;",
+                    "editable":"false",
+                    "endTag":"<div>"
+                }
+               
+             ]
+
+        }
+    ] 
+}

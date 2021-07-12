@@ -3,36 +3,43 @@ import { Context } from '../../state';
 import ContentArea from './contentArea';
 import _ from 'lodash'
 import Toolbar from '../Toolbar';
-import CodeEditor from '../CodeEditor'
+import TitleEditor from '../TitleEditor'
 
 const Editor = () => {
      const [state, dispatch] = useContext(Context);
-     const [editTemplateID, setEditTemplateID] = useState(-1);
-     const [editingContent, setEditingContent] = useState(undefined);
+     const [emailId, setEmailId] = useState(-1);
      const [showToolbar, setShowToolbar] = useState(false);
 
      const findTemplateFromID = (id) => {
-         let content = _.find(state.emailContent, function (o) { return o.WorkflowEmailContentID === id; });
-         
-         return content === undefined ? null : content.EmailContent;
+          let content = _.find(state.emailList, function (o) { return o.WorkflowEmailContentID === id; });
+
+          return content === undefined ? null : content.EmailContent;
      }
 
+     const disableStyleSheet = (styleSheet) => {
+          
+        if (styleSheet !== undefined) {
+               styleSheet.disabled=true;
+          }
+     }
 
      const updateStyleSheet = (title, style) => {
-          const styleSheet = _.find(document.styleSheets, function (sheet) { return sheet.title === title; });
+        
+          const styleSheet = _.find(document.styleSheets, function (sheet) { return sheet.title === title && sheet.disabled===false;});
+          
+          disableStyleSheet(styleSheet);
+     
+          const sheet = document.createElement('style')
+          sheet.title = title;
+          sheet.innerHTML = style;
+          document.body.appendChild(sheet);
 
-          if (styleSheet === undefined) {
-               const sheet = document.createElement('style')
-               sheet.title = title;
-               sheet.innerHTML = style;
-               document.body.appendChild(sheet);
-          }
-          else {
-               styleSheet.innerHTML = style;
-          }
+          console.log(document.styleSheets);
+        
      }
 
-     useEffect(() => {
+
+     const setStyleContent = (editingContent) => {
           var styleContent = '';
 
           if (editingContent !== undefined && editingContent) {
@@ -52,31 +59,31 @@ const Editor = () => {
                     return result;
                })
 
-               updateStyleSheet(editingContent.title, styleContent);
+               updateStyleSheet('contentEditor', styleContent);
           }
-
-     }, [editingContent]);
+     }
 
      useEffect(() => {
-          if (state.activeTemplate !== editTemplateID) {
-              setEditingContent(findTemplateFromID(state.activeTemplate));
-              setEditTemplateID(state.activeTemplate);
-              setShowToolbar(true);
+          if (state.emailId !== emailId) {
+               setStyleContent(findTemplateFromID(state.emailId));
+               setEmailId(state.emailId);
+               setShowToolbar(true);
           }
-     }, [state.activeTemplate]);
+     }, [state.emailId]);
 
 
 
      const renderEditableAreas = () => {
-          let contentAreas = null;
 
-          if (editingContent != null) {
-             contentAreas = editingContent.area.map(function (obj) {
-                  return <ContentArea key={obj.id} area={obj} contentID={obj.id}></ContentArea>;
+          let contentAreas = null;
+          const template = findTemplateFromID(state.emailId);
+
+          if (template != null) {
+               contentAreas = template.area.map(function (obj) {
+                    return <ContentArea key={obj.id + state.emailId} area={obj} contentID={obj.id}></ContentArea>;
                })
           }
 
-          // console.log('contentAreas', editingContent)
           return (
                <React.Fragment>
                     <Toolbar visible={showToolbar}></Toolbar>
@@ -85,7 +92,7 @@ const Editor = () => {
                               {contentAreas}
                          </div>
                     </div>
-                   </React.Fragment>
+               </React.Fragment>
           )
      }
 

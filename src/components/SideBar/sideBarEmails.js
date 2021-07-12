@@ -3,11 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCog, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { ListGroup } from 'react-bootstrap';
 import { Context } from '../../state';
-import Service from '../../services/';
-import {GetURLData} from '../../services/getURLData'
+import Service from '../../services';
+import { GetURLData } from '../../services/getURLData'
+import SystemNotification from '../../common/systemNotification'
 import _ from 'lodash'
 
-const SideBarEmailContent = (props) => {
+const SideBarEmails = (props) => {
   const { name } = props
 
   const [state, dispatch] = useContext(Context);
@@ -17,7 +18,7 @@ const SideBarEmailContent = (props) => {
 
   const RenderFields = () => {
 
-    var templates = state.emailContent.map(function (t) {
+    var templates = state.emailList.map(function (t) {
       var url = '#' + row;
       var key = "template" + row;
 
@@ -35,41 +36,45 @@ const SideBarEmailContent = (props) => {
 
 
   const ProcessContent = (data) => {
-    _.forEach(data, function(value) {
-      if(value.EmailContent){
-      var convertedValue =atob(value.EmailContent); 
-      value.EmailContent =  JSON.parse(convertedValue);}
+    _.forEach(data, function (value) {
+      if (value.EmailContent) {
+        var convertedValue = atob(value.EmailContent);
+        value.EmailContent = JSON.parse(convertedValue);
+      }
     });
-   
-    dispatch({ type: 'SET_ACTIVE_CONTENT', payload: data });
+
+    SystemNotification.SetEmailList(dispatch, data);
   }
 
   const OnDataReceived = (data) => {
     ProcessContent(data)
 
-    if(data.length===0)
-      dispatch({ type: 'SET_NOTIFICATION_ERROR', payload: 'No email content found!'});
+    if (data.length === 0)
+      SystemNotification.DisplayNotificationError('No email content found!');
   }
 
   useEffect(() => {
-  if (state.email) {
-      const url = Service.GetApplicationEmailContent(state.email);
+
+    if (state.emailTypeID > 0) {
+      const url = Service.GetApplicationEmailContent(state.emailTypeID);
 
       GetURLData(url, dispatch, OnDataReceived);
     }
-  }, [state.email]);
+  }, [state.emailTypeID]);
 
 
   const OnClick = (e) => {
     e.preventDefault();
-    dispatch({ type: 'SET_ACTIVE_MENU', payload: !toggle ? name : '' });
+    SystemNotification.ActiveMenu(dispatch, !toggle ? name : '');
     setToggle(!toggle);
 
   }
 
   const OnClickTemplate = (e, id) => {
-   e.preventDefault();
-    dispatch({ type: 'SET_ACTIVE_TEMPLATE', payload: id });
+    e.preventDefault();
+    
+    SystemNotification.SetEmailID(dispatch, id);
+   
   }
 
   return (
@@ -91,4 +96,4 @@ const SideBarEmailContent = (props) => {
   );
 };
 
-export default SideBarEmailContent;
+export default SideBarEmails;

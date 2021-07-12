@@ -23,7 +23,7 @@ const SaveEmail = (props) => {
           }, [display]);
         
      const findTemplateFromID = (id) => {
-          let content = _.find(state.emailContent, function (o) { return o.WorkflowEmailContentID === id; });
+          let content = _.find(state.emailList, function (o) { return o.WorkflowEmailContentID === id; });
 
           return content === undefined ? null : content.EmailContent;
      }
@@ -47,7 +47,7 @@ const SaveEmail = (props) => {
      }
 
      const SaveBlock = (uploadID, content, start, count, max) => {
-          const workflowEmailContentID = state.activeTemplate;
+          const workflowEmailContentID = state.emailId;
           const url = Service.UpdateWorkflowEmailContent(workflowEmailContentID, uploadID, max, count, content);
           
           const saveObj={
@@ -98,12 +98,10 @@ const SaveEmail = (props) => {
      }
 
      const Save = () => {
-          const email = findTemplateFromID(state.activeTemplate);
+          const email = findTemplateFromID(state.emailId);
           const json = JSON.stringify(email);
           encodedEmail =Base64.encode(json);
 
-          console.log(encodedEmail);
-        
           var numberOfBlocks = encodedEmail.length / block_size;
 
           const wholeBlocks = Math.trunc(numberOfBlocks)

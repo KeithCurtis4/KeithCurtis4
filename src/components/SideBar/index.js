@@ -2,17 +2,20 @@ import React, { useContext, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 import { Container, Row, Col} from 'react-bootstrap';
-import  SideBarEmail from './sideBarEmail';
+import  SideBarEmailTypes from './sideBarEmailTypes';
 import { Context } from '../../state';
-import  SideBarEmailContent from './sideBarEmailContent';
+import SideBarEmails from './sideBarEmails';
+import SideBarApplications from './sidebarApplications';
+import SystemNotification from '../../common/systemNotification'
 
 const SideBar = (props) => {
-  const { template, dataFields, emailContent, appCode} = props
+  const {applicationCode, displayDataFields, displayApplicationList, displayEmailTypes, displayEmailList  } = props
   const [state, dispatch] = useContext(Context);
 
   useEffect(() => {
-    if (state.application !== appCode) {
-      dispatch({ type: 'SET_APPLICATION', payload: appCode });
+    
+    if (state.applicationCode !== applicationCode && applicationCode) {
+       SystemNotification.SetApplication(dispatch, applicationCode);
     }
     });
 
@@ -24,14 +27,14 @@ const SideBar = (props) => {
             <strong>MAIN MENU</strong>
             <hr/>
         </div>
-        
-        {emailContent  && (<SideBarEmail name="email"></SideBarEmail>)}
+        {displayApplicationList  && (<SideBarApplications name="applications"></SideBarApplications>)}
+        {displayEmailTypes  && (<SideBarEmailTypes name="email"></SideBarEmailTypes>)}
         
         <div style={{paddingTop: "10px"}}>
-          {state.email && (<SideBarEmailContent name="content"></SideBarEmailContent>)}
+          {state.emailList && (<SideBarEmails name="content"></SideBarEmails>)}
         </div>
         
-        {dataFields  && (
+        {displayDataFields  && (
         <Row style={{paddingTop: "10px"}}>
           <Col>
             <FontAwesomeIcon icon={faDatabase} /> Data Fields

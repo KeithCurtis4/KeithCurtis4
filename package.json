@@ -19,10 +19,12 @@
     "jsonp": "^0.2.1",
     "lodash": "^4.17.21",
     "prismjs": "^1.23.0",
+    "query-string": "^4.3.4",
     "react": "^17.0.2",
     "react-block-ui": "^1.3.3",
     "react-bootstrap": "^1.5.1",
     "react-contenteditable": "^3.3.5",
+    "react-cookie": "^4.0.3",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
@@ -32,7 +34,8 @@
   "scripts": {
     "start": "react-scripts start",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [

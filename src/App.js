@@ -1,13 +1,12 @@
 import './App.css';
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap';
 import Store from './state'
 import SnackbarProvider from 'react-simple-snackbar'
 import { BrowserRouter as Router, Switch, Route, useParams } from "react-router-dom";
-import SideBar from '../src/components/SideBar';
-import TopNavBar from '../src/components/TopNavBar';
+import { CookiesProvider } from 'react-cookie';
 import ApplicationPage from './pages/applicationPage'
+import MainPage from './pages'
 
 
 
@@ -25,25 +24,16 @@ function App() {
 
   return (
     <Store> 
+      <CookiesProvider>
        <SnackbarProvider>
         <Router>
           <Switch>
             <Route path="/:appCode" children={<Application />} />
-            <Route path="/">
-              <Container fluid>
-                <Row>
-                  <Col lg={2} className="SideBar" style={{ paddingRight: "0px" }}>
-                    <SideBar emailContent />
-                  </Col>
-                  <Col lg={10} className="col-10 MainContent border-light" style={{ paddingLeft: "0px" }}>
-                    <TopNavBar title='Select Email Content' />
-                  </Col>
-                </Row>
-              </Container>
-            </Route>
-        </Switch>
+            <Route path="/" children={<MainPage />}/>
+          </Switch>
       </Router>
       </SnackbarProvider>
+      </CookiesProvider>
     </Store>
   );
 }

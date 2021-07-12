@@ -1,0 +1,52 @@
+{
+ "content":
+    [  
+       {
+            "id" :"0",
+            "width" :"672",
+            "css" : "",
+            "title" : "Congratulations on your new Role with Parallon!",
+            "subject" :"Congratulations [Student Name] on your new Patient Access Role with Parallon!",
+            "bodyStyle" : "body {font-family: Calibri,sans-serif; color: black;font-size: 11pt; font-weight: 500; margin: 0px; padding: 0px; background-color: #e2ebf5;}",
+            "styles" :
+            [
+              "{margin: auto;  width: 674px; margin-top:20px; margin-bottom:20px; border: 1px solid grey; background-color: #e2ebf5; min-height: 80%; font-family: Calibri,sans-serif; color: black; font-size: 11pt; font-weight: 500;}",
+              "h1 {color: #1e345d; font-weight: 600; font-size: 18pt;}",
+              "h2 {color: #1e345d; font-weight: 600; font-size: 16pt;}",
+              "h3 {color: #ed7d31; font-weight: 600; font-size: 14pt;}",
+              "h4 {color: #1e345d; font-style: italic; font-weight: 600; font-size: 12pt;}",
+              "li {color: #1e345d; padding-bottom: 10px; list-style-type: square; }",
+              "hr {background-color: #1e345d; height: 2px;}",
+              "#footer {color: #828f9b; font-size: 8pt; background-color: #e2ebf5;}"
+            ],
+            "area":
+             [
+                {
+                    "id" : "header",    
+                    "beginTag":"<div>",
+                    "designStyle":"",
+                    "html": "&lt;table width=&quot;672&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt; &lt;tr&gt; &lt;td width=&quot;672&quot; style=&quot;background-color: white&quot;&gt;&lt;img src=&quot;http://parallon.com/sites/default/files/parallon-email-header.png&quot;&gt;&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;",
+                    "editable":"false",
+                    "endTag":"<div>"                    
+                },
+               {
+                    "id" : "content",    
+                    "beginTag":"<div>",
+                    "designStyle":"",
+                    "html": "&lt;table width=&quot;672&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td width=&quot;672&quot; style=&quot;background-color: white; padding-left: 30px; padding-right: 30px;&quot; align=&quot;Left&quot;&gt;&lt;h1&gt;Congratulations on your new Role with Parallon!&lt;/h1&gt;&lt;h2&gt;Your Training Journey&lt;/h2&gt;&lt;p&gt;We are excited to have you on board and look forward to providing the Training you need to begin a successful career with our organization.&lt;/p&gt;&lt;p&gt;During Training, you will learn about our systems, functions, and how your role contributes to providing a superior patient experience&lt;/p&gt;&lt;p&gt;Please complete Training for your role in the order listed below.&lt;/p&gt;&lt;table width=&quot;610&quot; border=&quot;0&quot; style=&quot;font-weight: bold; color: white&quot; &gt;&lt;tr style=&quot;background-color:#002060; height: 30px&quot;&gt;&lt;td colspan=&quot;2&quot; style=&quot;background-color:#002060;&quot; align=&quot;Center&quot;&gt;&lt;b&gt;Click on the training name to begin your journey&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;10%&quot; style=&quot;background-color:#002060; height: 30px; color: white&quot; align=&quot;center&quot; &gt;1&lt;/td&gt;&lt;td width=&quot;80%&quot; style=&quot;background-color:#ebf4fb; padding-left;10px;&quot;&gt;&lt;a href=&quot;#&quot;&gt;General Orientation Independent Training Classroom*&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;10%&quot; style=&quot;background-color:#002060; height: 30px; color: white&quot; align=&quot;center&quot; &gt;2&lt;/td&gt;&lt;td width=&quot;80%&quot; style=&quot;background-color:#ebf4fb; padding-left;10px;&quot;&gt;&lt;a href=&quot;#&quot;&gt;General Basics Independent Training Classroom*&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;10%&quot; style=&quot;background-color:#002060; height: 30px; color: white&quot; align=&quot;center&quot; &gt;3&lt;/td&gt;&lt;td width=&quot;80%&quot; style=&quot;background-color:#ebf4fb; padding-left;10px;&quot;&gt;&lt;a href=&quot;#&quot;&gt;Collections Core*&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;center&quot; style=&quot;color: black; font-size: 12px;&quot; &gt;*The Independent Training Classroom needs to be done on a work computer; a personal device is not allowed due to security access issues. All Training Classroom courses are to be completed by the Fridaybefore Instructor-Led Training.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;center&quot;&gt;&lt;h3&gt;If you have questions, ask Virtual Vanessa for Help&lt;/h3&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;center&quot;&gt;&lt;table width=&quot;50%&quot; style=&quot;background-color: #DEDEDE; margin-left: 30px; margin-right: 30px; color: black; font-size: 12px; &quot;&gt;&lt;tr style=&quot;background-color: #DEDEDE; height: 50px;&quot;&gt;&lt;td align=&quot;center&quot; style=&quot; border-left: 3px dashed black; border-right: 3px dashed black; border-top: 3px dashed black;&quot;&gt;HelpMeVirtualVanessa&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background-color: #E28426; height: 50px; &quot;&gt;&lt;td style=&quot;border: 3px dashed black; padding:8px;&quot;&gt;Monday - Friday 8am - 5pm CST&lt;br&gt;Click &lt;a target=_blank href=&quot;https://c2jpoc.azurewebsites.net/api/JoinSpace/Y2lzY29zcGFyazovL3VzL1JPT00vYjAzMzk3YzAtMTk2My0xMWViLThkY2ItNjU3YzBlODYxNWY4&quot;&gt;HelpMeVirtualVanessa&lt;/a&gt;&lt;br&gt;If you need help outside of support hours, a response is sent the next business data @8am.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;Please look for an email from your local Education team for SSC New Hire Orientation.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Please respond to this email for assistance: &lt;a href=&quot;mailto:PARA.NewHireTraining@parallon.com&quot;&gt;PARA.NewHireTraining@parallon.com&lt;/a&gt;.&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;",
+                    "end":"<div>"
+                },
+                {
+                    "id" : "footer",    
+                    "beginTag":"<div>",
+                    "designStyle":"",
+                    "html": "&lt;table width=&quot;672&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;&lt;td width=&quot;672&quot;&gt;&lt;img src=&quot;http://parallon.com/sites/default/files/parallon-email-footer.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width=&quot;672&quot; align=&quot;Left&quot;&gt;&lt;div id=&quot;footer&quot;&gt;This email and any files transmitted with it may contain PRIVILEGED or CONFIDENTIAL information and may be read or used only by the intended recipient.&lt;br/&gt;If you are not the intended recipient of the email or any of its attachments, please be advised that you have received this email in error and that any use, dissemination, distribution, forwarding, printing, or copying of this email or any attached files is strictly prohibited. If you have received this email in error, please immediately purge it and all attachments and notify the sender by reply email or contact the sender at the number listed.&lt;br/&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt;",
+                    "editable":"false",
+                    "endTag":"<div>"
+                }
+               
+             ]
+
+        }
+    ] 
+}
