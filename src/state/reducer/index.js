@@ -1,4 +1,5 @@
 const Reducer = (state, action) => {
+   
     switch (action.type) {
         case 'SET_APPLICATION_CODE':
             return {
@@ -13,29 +14,23 @@ const Reducer = (state, action) => {
             };
 
         case 'SET_EMAIL_TYPE_ID':
-        return {
-            ...state,
-            emailTypeID: action.payload
-        };
+            return {
+                ...state,
+                emailTypeID: action.payload
+            };
 
         case 'SET_EMAIL_LIST':
-        return {
-            ...state,
-            emailList: action.payload
-        };
+            return {
+                ...state,
+                emailList: action.payload
+            };
 
         case 'SET_EMAIL_ID':
             return {
                 ...state,
                 emailId: action.payload
             };
-            
-        case 'SET_ACTIVE_TEMPLATE':
-            return {
-                ...state,
-                activeTemplate: action.payload
-            };
-
+        
         case 'SET_ACTIVE_MENU':
             return {
                 ...state,
@@ -47,14 +42,6 @@ const Reducer = (state, action) => {
                 ...state,
                 codeEditor: action.payload
             };
-        
-
-        case 'SET_ACTIVE_CONTENT':
-            return {
-                ...state,
-                emailContent: action.payload
-            };
-
         case 'SET_BUSY':
             return {
                 ...state,
@@ -83,13 +70,42 @@ const Reducer = (state, action) => {
                 ...state,
                 secureUser: action.payload
             };
-        
-            case 'SET_SECURE_APPLICATION':
+
+        case 'SET_SECURE_APPLICATION':
+            return {
+                ...state,
+                secureApplication: action.payload
+            };
+
+        case 'SET_ACTIVE_EDITOR':
+            return {
+                ...state,
+                activeEditor: action.payload
+            };
+        case 'SET_ACTIVE_CONTENT':
         return {
             ...state,
-            secureApplication: action.payload
+            activeContent: action.payload
         };
+        case 'SET_EDITOR_CHANGE':
+            return {
+                ...state,
+                editorChange: action.payload
+            };
+        case 'SET_EDITOR_FOCUS':
+            return {
+                ...state,
+                editorFocus: action.payload
+            };
+        case 'SET_DATA_FIELDS':
+        return {
+            ...state,
+            dataFields: action.payload
+        };
+
             
+
+        
         default:
             return state;
     }

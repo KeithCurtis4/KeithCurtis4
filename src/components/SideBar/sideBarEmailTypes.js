@@ -21,6 +21,7 @@ const SideBarEmailTypes = (props) => {
 
   const OnClickEmail = (e, id) => {
     e.preventDefault();
+    SystemNotification.ClearData(dispatch);
     SystemNotification.SetEmailTypeID(dispatch, id);
   }
   

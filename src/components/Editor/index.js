@@ -3,7 +3,6 @@ import { Context } from '../../state';
 import ContentArea from './contentArea';
 import _ from 'lodash'
 import Toolbar from '../Toolbar';
-import TitleEditor from '../TitleEditor'
 
 const Editor = () => {
      const [state, dispatch] = useContext(Context);
@@ -33,9 +32,6 @@ const Editor = () => {
           sheet.title = title;
           sheet.innerHTML = style;
           document.body.appendChild(sheet);
-
-          console.log(document.styleSheets);
-        
      }
 
 
@@ -68,6 +64,9 @@ const Editor = () => {
                setStyleContent(findTemplateFromID(state.emailId));
                setEmailId(state.emailId);
                setShowToolbar(true);
+          }
+          else{
+               setShowToolbar(false);
           }
      }, [state.emailId]);
 

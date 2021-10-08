@@ -69,17 +69,25 @@ const Service = {
 
    GetGUID: function () {
       const smartObjectURL = Service.buildSmartObjectURL('SmartObjectServices/rest/Common/SmartObjects/Common%20GUID/List', '', 'json');
-      
       const param = 'url='.concat(Service.encodeURL(smartObjectURL));
       const k2IntegrationURL = Service.buildK2IntegrationURL('api/K2Common/JsonpCall', param);
       return k2IntegrationURL;
    },
 
-   GetWorkflowApplications: function (workflowEmailContentID, uploadID, maxBlock, block, content) {
+   GetWorkflowApplications: function () {
       const smartObjectURL = Service.buildSmartObjectURL('SmartObjectServices/rest/Common/SmartObjects/Common%20WorkflowApplication/List', '', 'json');
       const param = 'url='.concat(Service.encodeURL(smartObjectURL));
       const k2IntegrationURL = Service.buildK2IntegrationURL('api/K2Common/JsonpCall', param);
       
+      return k2IntegrationURL;
+   },
+   
+   GetEmailDataFields: function (ApplicationCode) {
+      const appCode = 'ApplicationCode'.concat('=', Service.encodeData(ApplicationCode));
+      const smartObjectURL = Service.buildSmartObjectURL('SmartObjectServices/rest/Common/SmartObjects/Common%20GetEmailDataFields/List', appCode, 'json');
+      const param = 'url='.concat(Service.encodeURL(smartObjectURL));
+      const k2IntegrationURL = Service.buildK2IntegrationURL('api/K2Common/JsonpCall', param);
+
       return k2IntegrationURL;
    }
 }

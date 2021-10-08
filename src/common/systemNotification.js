@@ -53,11 +53,31 @@ const SystemNotification = {
     SetSecureApplication:  function (dispatch, applicationCode) {
         dispatch({ type: 'SET_SECURE_APPLICATION', payload: applicationCode });
     },
+    SetEditorFocus:  function (dispatch, element) {
+        dispatch({ type: 'SET_EDITOR_FOCUS', payload: element });
+    },
+    
     ClearData: function (dispatch) {
         console.log('ClearData');
         SystemNotification.SetEmailID(dispatch,-1);
         SystemNotification.SetActiveContent(dispatch, []);
+        SystemNotification.ActiveEditor(dispatch, '');
+        
+    },
+    ActiveEditor:  function (dispatch, activeEditor) {
+        dispatch({ type: 'SET_ACTIVE_EDITOR', payload: activeEditor });
+    },
+    EditorChange:  function (dispatch, editorChange) {
+        dispatch({ type: 'SET_EDITOR_CHANGE', payload: editorChange });
+    },
+    SetDataFields:  function (dispatch, dataFields) {
+        dispatch({ type: 'SET_DATA_FIELDS', payload: dataFields });
     }
+
+    
+
+
+    
 }
 
 export default SystemNotification;

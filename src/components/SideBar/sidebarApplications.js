@@ -14,7 +14,7 @@ const SideBarApplications = (props) => {
   const [applications, SetApplications] = useState([]);
   var row = 0;
 
-  
+
   const OnClick = (e) => {
     e.preventDefault();
     SystemNotification.ActiveMenu(dispatch, !toggle ? name : '');
@@ -47,14 +47,24 @@ const SideBarApplications = (props) => {
   const OnDataReceived = (data) => {
     SetApplications(data);
     SystemNotification.ClearData(dispatch);
-    
+
     if (data.length === 0)
-       SystemNotification.DisplayNotificationError(dispatch, 'Applications not found!');
+      SystemNotification.DisplayNotificationError(dispatch, 'Applications not found!');
+  }
+
+  const OnDataFieldsReceived = (data) => {
+    SystemNotification.SetDataFields(dispatch, data);
   }
 
   useEffect(() => {
-   GetURLData(Service.GetWorkflowApplications(), dispatch, OnDataReceived);
-  },[]);
+    if (state.applicationCode) {
+      GetURLData(Service.GetEmailDataFields(state.applicationCode), dispatch, OnDataFieldsReceived);
+    }
+  }, [state.applicationCode]);
+
+  useEffect(() => {
+    GetURLData(Service.GetWorkflowApplications(), dispatch, OnDataReceived);
+  }, []);
 
   return (
     <React.Fragment>

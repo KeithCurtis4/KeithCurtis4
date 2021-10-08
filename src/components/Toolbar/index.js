@@ -1,7 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useContext } from 'react'
+import { Context } from '../../state';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBold, faItalic, faUnderline, faLink, faSave, faAlignLeft, faAlignRight, faAlignCenter, faAlignJustify, faTrash, faCode, faFont, faEyeDropper, faCopy, faPaste, faCut, faEraser, faListOl, faListUl} from '@fortawesome/free-solid-svg-icons'
+import { faBold, faItalic, faUnderline, faLink, faSave, faAlignLeft, faAlignRight, faAlignCenter, faAlignJustify, faTrash, faCode, faFont, faEyeDropper, faCopy, faPaste, faCut, faEraser, faListOl, faListUl, faDatabase} from '@fortawesome/free-solid-svg-icons'
 import LinkEditor from './linkEditor';
+import DataFields from './dataFields';
 import CodeEditor from '../CodeEditor'
 import SaveEmail from './saveEmail'
 
@@ -10,6 +12,10 @@ const Toolbar = (props) => {
     const [showLinkEditor, setShowLinkEditor] = useState(false);
     const [showCodeEditor, setShowCodeEditor] = useState(false);
     const [showSaveEmail,  setShowSaveEmail] = useState(false);
+    const [showDataFields, setShowDataFields] = useState(false);
+    const [activeEditor,  setActiveEditor] = useState('');
+    const [state, dispatch] = useContext(Context);
+  
     
     const OnClick = (e, cmd) => {
         e.preventDefault();
@@ -17,6 +23,7 @@ const Toolbar = (props) => {
         switch (cmd) {
             
             default:
+                setEditorFocus();
                 document.execCommand(cmd);
                 break;
 
@@ -27,9 +34,10 @@ const Toolbar = (props) => {
         e.preventDefault();
         
         switch (param) {
-            
             default:
+                setEditorFocus();
                 document.execCommand('formatBlock', true, param);
+              
                 break;
 
         }
@@ -46,7 +54,13 @@ const Toolbar = (props) => {
     }
 
     const displayCodeEditor = () => {
-        setShowCodeEditor(!showCodeEditor);
+        console.log(state);
+        if(state.activeEditor){
+            if(!showCodeEditor)
+            {
+                setActiveEditor(state.activeEditor)
+            }
+        setShowCodeEditor(!showCodeEditor);}
     }
 
     const closeCodeEditor = () => {
@@ -60,6 +74,9 @@ const Toolbar = (props) => {
         setShowSaveEmail(false);
     }
     
+    const setEditorFocus = () => {
+        state.editorFocus.focus();
+    }
 
     return (
         <React.Fragment>
@@ -67,6 +84,11 @@ const Toolbar = (props) => {
             {visible && (
             <div className="btn-toolbar Toolbar">
                 <div className="btn-group">
+                    <button type="button" className="btn btn-outline-dark" title="Data Fields Document"  onClick={(event) => setShowDataFields(!showDataFields)}><FontAwesomeIcon icon={faDatabase} /></button>
+                    {showDataFields && (<DataFields/>)}
+                </div>
+               
+                <div className="btn-group  btn-padded-left">
                     <button type="button" className="btn btn-outline-dark" title="Bold" onClick={(event) => OnClick(event, 'bold')}><FontAwesomeIcon icon={faBold} /> </button>
                     <button type="button" className="btn btn-outline-dark" title="Italic" onClick={(event) => OnClick(event, 'italic')}><FontAwesomeIcon icon={faItalic} /></button>
                     <button type="button" className="btn btn-outline-dark" title="Underline" onClick={(event) => OnClick(event, 'underline')}><FontAwesomeIcon icon={faUnderline} /></button>
@@ -109,7 +131,9 @@ const Toolbar = (props) => {
             </div>)}
             <LinkEditor display={showLinkEditor} onClose={closeLinkEditor}/>
             <SaveEmail display={showSaveEmail} onClose={closeSaveEmail}/>
-            {showCodeEditor  && (<CodeEditor onClose={closeCodeEditor}/>)}
+         
+           
+            {showCodeEditor  && (<CodeEditor onClose={closeCodeEditor} activeEditor={activeEditor}/>)}
             
         </React.Fragment>
     );

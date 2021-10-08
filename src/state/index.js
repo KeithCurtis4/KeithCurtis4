@@ -2,11 +2,11 @@ import React, {createContext, useReducer} from "react";
 import Reducer from './reducer'
 
 let initialState = {
-    activeTemplate: -1,
     applicationCode : '',
     busy: false,
     code: '',
     codeTitle: '',
+    dataFields: [],
     emailTypeID: -1,
     emailTypeList: [],
     emailList :[],
@@ -14,10 +14,15 @@ let initialState = {
     editArea: '',
     notification : '',
     secureApplication:'',
-    secureUser:''
-
-
-
+    secureUser:'',
+    //Current area being edited
+    activeEditor:'',
+    //code editor being changd
+    editorChange:
+    {
+        activeEditor: '',
+        code: ''
+    }
 };
 
 const Store = ({children}) => {

@@ -29,7 +29,9 @@ export const GetURLData = (url, dispatch, onCompleted, returnObj,parse=true) => 
     setBusy(true);
 
     try {
-        fetchJsonp(url)
+        fetchJsonp(url, {
+            timeout: 10000,
+          })
             .then(function (response) {
                 setBusy(false);
                 return response.json();

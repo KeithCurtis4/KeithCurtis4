@@ -65,15 +65,20 @@ const SideBarEmails = (props) => {
 
   const OnClick = (e) => {
     e.preventDefault();
-    SystemNotification.ActiveMenu(dispatch, !toggle ? name : '');
-    setToggle(!toggle);
+
+    if (state.editorChange.activeEditor === '') {
+      SystemNotification.ActiveMenu(dispatch, !toggle ? name : '');
+      setToggle(!toggle);
+    }
 
   }
 
   const OnClickTemplate = (e, id) => {
     e.preventDefault();
-    
-    SystemNotification.SetEmailID(dispatch, id);
+  
+    if (state.editorChange.activeEditor === '') {
+      SystemNotification.SetEmailID(dispatch, id);
+    }
    
   }
 
